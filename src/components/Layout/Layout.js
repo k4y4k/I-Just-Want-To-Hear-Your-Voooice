@@ -7,6 +7,8 @@ import localDe from '../../../data/de.json';
 import Context from '../i18n/createContext';
 import Provider from '../i18n/LayoutProvider';
 
+import '../../../node_modules/meyer-reset-scss/reset.scss';
+
 addLocaleData([...en, ...de]);
 
 const messages = {
