@@ -1,7 +1,6 @@
-import React from 'react'
-import { compose, withState, withHandlers, lifecycle } from 'recompose'
-import { Context } from '../Context'
-
+import React from 'react';
+import { compose, withState, withHandlers, lifecycle } from 'recompose';
+import Context from './createContext';
 
 const Provider = ({ children, lang, toggleLanguage }) => (
 	<Context.Provider
@@ -12,26 +11,26 @@ const Provider = ({ children, lang, toggleLanguage }) => (
 	>
 		{children}
 	</Context.Provider>
-)
+);
 
 const enhance = compose(
 	withState('lang', 'handleLanguage', 'en'),
 	withHandlers({
 		toggleLanguage: ({ handleLanguage }) => value => {
-			handleLanguage(value)
-			localStorage.setItem('lang', value)
+			handleLanguage(value);
+			localStorage.setItem('lang', value);
 		}
 	}),
 	lifecycle({
 		componentDidMount() {
-			const localLang = localStorage.getItem('lang')
+			const localLang = localStorage.getItem('lang');
 			if (localLang) {
-				this.props.handleLanguage(localLang)
+				this.props.handleLanguage(localLang);
 			} else {
-				this.props.handleLanguage(navigator.language.split('-')[0])
+				this.props.handleLanguage(navigator.language.split('-')[0]);
 			}
 		}
 	})
-)
+);
 
-export default enhance(Provider)
+export default enhance(Provider);

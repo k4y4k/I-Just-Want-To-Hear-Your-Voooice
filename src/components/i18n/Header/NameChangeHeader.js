@@ -1,5 +1,7 @@
 import React from 'react';
-import { Context, Container } from '../../common';
+// import { Context } from "../../common";
+import Context from '../createContext';
+import Container from '../../Layout/Container';
 import SelectLanguage from './SelectLanguage';
 import { Navbar, StyledHeader } from './styles';
 

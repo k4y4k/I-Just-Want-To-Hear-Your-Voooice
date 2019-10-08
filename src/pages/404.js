@@ -1,12 +1,13 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { Layout, Container } from '../components/common'
- import Header from '../components/theme/Header'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import Layout from '../components/Layout/Layout';
+import Container from '../components/Layout/Container';
+import Header from '../components/i18n/Header/NameChangeHeader';
 
 const NotFoundPage = () => (
 	<Layout>
 		<React.Fragment>
- 			<Header />
+			<Header />
 			<Container>
 				<h2>
 					<FormattedMessage id="not_found" />
@@ -14,6 +15,6 @@ const NotFoundPage = () => (
 			</Container>
 		</React.Fragment>
 	</Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
