@@ -2,14 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { FormattedMessage } from 'react-intl'
 import { Layout, Container } from '../components/common'
-import SEO from '../components/common/SEO'
-import Header from '../components/theme/Header'
+ import Header from '../components/theme/Header'
 
 const IndexPage = () => (
 	<Layout>
 		<React.Fragment>
-			<SEO title="welcome" />
-			<Header />
+ 			<Header />
 			<Welcome as={Container}>
 				<h2>
 					<FormattedMessage id="welcome" />
