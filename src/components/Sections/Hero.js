@@ -14,7 +14,7 @@ const Hero = ({ className, children }) => {
 
 const StyledHero = styled(Hero)`
   background-color: tomato;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-content: center;
