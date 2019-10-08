@@ -6,8 +6,7 @@ import localEng from '../../../data/en.json';
 import localDe from '../../../data/de.json';
 import Context from '../i18n/createContext';
 import Provider from '../i18n/LayoutProvider';
-
-import '../../../node_modules/meyer-reset-scss/reset.scss';
+import '../meta/styles.scss';
 
 addLocaleData([...en, ...de]);
 
