@@ -18,6 +18,5 @@ module.exports = {
 				showSpinner: false
 			}
 		}
-		// 'gatsby-plugin-offline'
 	]
 };
