@@ -1,0 +1,22 @@
+{
+  "name": "hear-your-voice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:k4y4k/I-Just-Want-To-Hear-Your-Voooice.git",
+  "author": "kayak <41324271+by-k4y4k@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "@commitlint/prompt-cli": "8.2.0",
+    "husky": "3.0.9"
+  },
+  "scripts": {
+    "commit": "commit"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
