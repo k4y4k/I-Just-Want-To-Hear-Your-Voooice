@@ -1,5 +1,5 @@
-const  nimify = require("nimify").nimify
+const nimify = require("nimify").nimify;
 
-const string = "Finally, we can speak clearly";
+const string = "So what are you waiting for?";
 
 console.log(nimify(string));

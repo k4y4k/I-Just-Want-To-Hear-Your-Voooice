@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ .Site.Language.Lang }}</title>
+  <title>{{ .Site.Params.Title }}</title>
   {{ $cssOpts := (dict "includePaths" (slice "node_modules/bulma" "assets/scss")) }}
-  {{ $style := resources.Get "scss/main.scss" | toCSS $cssOpts | minify |  }}
+  {{ $style := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
 
@@ -14,24 +14,27 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <h2 class="subtitle">ambi translate</h2>
+        <h2 class="subtitle">{{ .Site.Params.Title }}</h2>
       </div>
       <div style="flex-grow:2;"></div>
       <div class="navbar-item">
-        <button class="button">nimish</button>
+        <a class="button" href="{{ .Site.Params.OtherLangLink }}">
+          {{ .Site.Params.OtherLang }}
+        </a>
       </div>
     </div>
   </nav>
   <div class="hero is-medium is-dark is-bold has-text-centered ">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title"> Ambi Translate </h1>
+        <h1 class="title"> {{ .Site.Params.Title }} </h1>
         <h2 class="subtitle">
-          {{ .Site.Params.Revolution  }}
+          {{ .Site.Params.Revolution }}
         </h2>
-        {{/* ---  */}}
-        <button class="button is-primary">Sign up for free</button>
-        <button class="button is-primary is-outlined">Log in to Ambi Translate</button>
+        <button class="button is-primary">{{ .Site.Params.SignUp }}</button>
+        <button class="button is-primary is-outlined">
+          {{ .Site.Params.LogIn }}
+        </button>
       </div>
     </div>
   </div>
@@ -40,31 +43,31 @@
       <div class="level">
         <div class="level-item has-text-centered">
           <div>
-            <p class="heading">Harbringers</p>
-            {{$tant := resources.Get "img/tant.png"}}
-            {{$tant = $tant.Resize "x256"}}
-            <img class="image is-64x64" src="{{$tant.Permalink}}" alt="">
-            {{$gen := resources.Get "img/gen.png"}}
-            {{$gen = $gen.Resize "x256"}}
-            <img class="image is-64x64" src="{{$gen.Permalink}}" alt="">
+            <p class="heading">{{ .Site.Params.TTSCodenames }}</p>
+            {{ $tant := resources.Get "img/tant.png" }}
+            {{ $tant = $tant.Resize "x256" }}
+            <img class="image is-64x64" src="{{ $tant.Permalink }}" alt="">
+            {{ $gen := resources.Get "img/gen.png" }}
+            {{ $gen = $gen.Resize "x256" }}
+            <img class="image is-64x64" src="{{ $gen.Permalink }}" alt="">
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="heading">Languages Spoken</p>
-            <p class="title">140+</p>
+            <p class="heading">{{ .Site.Params.NumLangsSpoken }}</p>
+            <p class="title">{{ .Site.Params.NumLangsSpokenFigure }}</p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="heading">Daily Users</p>
-            <p class="title">935K</p>
+            <p class="heading">{{ .Site.Params.DailyUsers }}</p>
+            <p class="title">{{ .Site.Params.DailyUsersFigure }}</p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="heading">Total Translations Made</p>
-            <p class="title">a fair few</p>
+            <p class="heading">{{ .Site.Params.TotalTranslations }}</p>
+            <p class="title">{{ .Site.Params.TotalTranslationsFigure }}</p>
           </div>
         </div>
       </div>
@@ -72,66 +75,74 @@
   </section>
   <section class="section">
     <div class="container">
-      <p>In today's modern world, communication reigns. Technology helps us communicate anything with anyone, at any time, like never before in human history.</p>
-      <p> Tools such as Twitter allow us to share quick updates about our day in seconds. Facebook allows us to catch up with grandma and childhood friends without breaking a sweat.</p>
+      <p>{{ .Site.Params.InTodaysWorld }}</p>
+      <p>{{ .Site.Params.Grandma }}</p>
       <br>
-      <h2 class="subtitle ">Stumbling on language barriers is so yesteryear.</h2>
-      <p>If you followed Shakespeare on Twitter, could you understand him? </p>
-      <p>When you travel, are you ever sure that you're saying what you mean? </p>
-      <p>Wouldn't it be nice to pass off devastating insults as foreign, exotic compliments?</p>
+      <h2 class="subtitle">{{ .Site.Params.Yesteryear }}</h2>
+      <p>{{ .Site.Params.Shakespeare }}</p>
+      <p>{{ .Site.Params.WhatYouMean }}</p>
+      <p>{{ .Site.Params.ExoticCompliment }}</p>
       <br>
-      <h2 class="subtitle">With Ambi Translate, the whole world can speak clearly.</h2>
+      <h2 class="subtitle">{{ .Site.Params.WithTranslate }}</h2>
     </div>
   </section>
   <section class="section">
     <div class="container has-text-centered">
-      <h1 class="title">How does it work?</h1>
-      <h2 class="subtitle">It's simple! Just speak.</h2>
+      <h1 class="title">{{ .Site.Params.How }}</h1>
+      <h2 class="subtitle">{{ .Site.Params.JustSpeak }}</h2>
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-8">
           <div class="tile">
             <div class="tile is-parent is-vertical">
               <article class="tile is-child box">
-                <h2 class="subtitle">Speak <span class="has-text-info">naturally</span></h2>
-                <p>Our Harbringers of the Revolution can translate for you instantly, in any one of over 140 languages.</p>
+                <h2 class="subtitle">
+                  {{ .Site.Params.Naturally | markdownify }}
+                </h2>
+                <p>{{ .Site.Params.InstantTranslation }}</p>
                 <br>
-                <p>Just like real translators, they do their best to match your original tone and style.</p>
+                <p>{{ .Site.Params.JustLike }}</p>
               </article>
             </div>
             <div class="tile is-parent">
               <article class="tile is-child box">
-                <h2 class="subtitle">Speak <span class="has-text-info">confidently</span></h2>
-                <p> The Harbringers have learned from a database of over <strong>sixty-five billion written documents</strong> and a further <strong>eighty-four billion audio recordings</strong>. Not only that, but they also learn from corrections submitted by millions of people each day.</p>
+                <h2 class="subtitle">
+                  {{ .Site.Params.Confidently | markdownify }}
+                </h2>
+                <p>{{ .Site.Params.Database | safeHTML }}</p>
               </article>
             </div>
           </div>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child box">
-            <h2 class="subtitle">Speak <span class="has-text-info">from anywhere</span></h2>
-            <p>Ambi Translate works for you, the way you work.</p>
+            <h2 class="subtitle">
+              {{ .Site.Params.FromAnywherely | markdownify }}
+            </h2>
+            <p>{{ .Site.Params.TheWayYou }}</p>
             <br>
-            <p class="has-text-weight-bold">Use Ambi Mail? </p>
-            <p> @Daydream practically lives in his inbox. </p>
-            <p class="has-text-weight-bold"> Prefer to use Ambi Here? </p>
-            <p> Catch up with @JustCause. </p>
-            <p class="has-text-weight-bold"> Need to make sense of a call? </p>
-            <p> Add a Harbringer to your Ambi Speak call for free! </p>
+            <p class="has-text-weight-bold">{{ .Site.Params.AmbiMail }}</p>
+            <p>{{ .Site.Params.Inbox }}</p>
+            <p class="has-text-weight-bold">{{ .Site.Params.Here }}</p>
+            <p>{{ .Site.Params.CatchUp }}</p>
+            <p class="has-text-weight-bold">{{ .Site.Params.OnCall }}</p>
+            <p>{{ .Site.Params.AmbiSpeak }}</p>
           </article>
         </div>
       </div>
       <div class="columns">
         <div class="column"></div>
         <div class="column is-three-fifths">
-          <p>All you need is an Ambi account.</p>
-          <p>Don't have one? Sign up for free:</p>
+          <p>{{ .Site.Params.YouNeedAccount }}</p>
+          <p>{{ .Site.Params.DontHaveOne }}</p>
           <br>
           <div class="field has-addons has-addons-centered">
             <p class="control">
               <input class="input" type="text" placeholder="Username">
             </p>
             <p class="control">
-              <button class="button is-static">@ambi.com</button>
+              <button class="button is-static">
+                {{ .Site.Params.AtAmbi }}
+              </button>
             </p>
           </div>
         </div>
@@ -140,18 +151,20 @@
   </section>
   <div class="hero is-primary">
     <div class="hero-body">
-      <h1 class="title is-monospace">@Daydream</h1>
+      <h1 class="title is-monospace">{{ .Site.Params.NameOne }}</h1>
     </div>
   </div>
   <div class="hero is-danger">
     <div class="hero-body">
-      <h1 class="title is-monospace">@JustCause</h1>
+      <h1 class="title is-monospace">{{ .Site.Params.NameTwo }}</h1>
     </div>
   </div>
   <section class="section has-text-centered">
-    <h1 class="title">So what are you waiting for?</h1>
-    <button class="button is-primary">Sign up for free</button>
-    <button class="button is-primary is-outlined">Log in to Ambi Translate</button>
+    <h1 class="title">{{ .Site.Params.WaitingFor }}</h1>
+    <button class="button is-primary">{{ .Site.Params.SignUp }}</button>
+    <button class="button is-primary is-outlined">
+      {{ .Site.Params.LogIn }}
+    </button>
   </section>
 </body>
 
