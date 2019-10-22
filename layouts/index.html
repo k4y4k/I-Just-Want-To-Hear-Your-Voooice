@@ -11,23 +11,42 @@
 </head>
 
 <body>
-  <div class="hero is-medium is-dark is-bold has-text-centered">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <h2 class="subtitle">ambi translate</h2>
+      </div>
+      <div style="flex-grow:2;"></div>
+      <div class="navbar-item">
+        <button class="button">nimish</button>
+      </div>
+    </div>
+  </nav>
+  <div class="hero is-medium is-dark is-bold has-text-centered ">
     <div class="hero-body">
       <div class="container">
         <h1 class="title"> Ambi Translate </h1>
         <h2 class="subtitle">
-          {{ .Site.Params.Revolution | markdownify }}
+          {{ .Site.Params.Revolution  }}
         </h2>
+        {{/* ---  */}}
+        <button class="button is-primary">Sign up for free</button>
+        <button class="button is-primary is-outlined">Log in to Ambi Translate</button>
       </div>
     </div>
   </div>
   <section class="section">
     <div class="container">
-      <nav class="level">
+      <div class="level">
         <div class="level-item has-text-centered">
           <div>
             <p class="heading">Harbringers</p>
-            <p class="title">2</p>
+            {{$tant := resources.Get "img/tant.png"}}
+            {{$tant = $tant.Resize "x256"}}
+            <img class="image is-64x64" src="{{$tant.Permalink}}" alt="">
+            {{$gen := resources.Get "img/gen.png"}}
+            {{$gen = $gen.Resize "x256"}}
+            <img class="image is-64x64" src="{{$gen.Permalink}}" alt="">
           </div>
         </div>
         <div class="level-item has-text-centered">
@@ -48,7 +67,7 @@
             <p class="title">a fair few</p>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
   </section>
   <section class="section">
@@ -63,6 +82,76 @@
       <br>
       <h2 class="subtitle">With Ambi Translate, the whole world can speak clearly.</h2>
     </div>
+  </section>
+  <section class="section">
+    <div class="container has-text-centered">
+      <h1 class="title">How does it work?</h1>
+      <h2 class="subtitle">It's simple! Just speak.</h2>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child box">
+                <h2 class="subtitle">Speak <span class="has-text-info">naturally</span></h2>
+                <p>Our Harbringers of the Revolution can translate for you instantly, in any one of over 140 languages.</p>
+                <br>
+                <p>Just like real translators, they do their best to match your original tone and style.</p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <h2 class="subtitle">Speak <span class="has-text-info">confidently</span></h2>
+                <p> The Harbringers have learned from a database of over <strong>sixty-five billion written documents</strong> and a further <strong>eighty-four billion audio recordings</strong>. Not only that, but they also learn from corrections submitted by millions of people each day.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box">
+            <h2 class="subtitle">Speak <span class="has-text-info">from anywhere</span></h2>
+            <p>Ambi Translate works for you, the way you work.</p>
+            <br>
+            <p class="has-text-weight-bold">Use Ambi Mail? </p>
+            <p> @Daydream practically lives in his inbox. </p>
+            <p class="has-text-weight-bold"> Prefer to use Ambi Here? </p>
+            <p> Catch up with @JustCause. </p>
+            <p class="has-text-weight-bold"> Need to make sense of a call? </p>
+            <p> Add a Harbringer to your Ambi Speak call for free! </p>
+          </article>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column is-three-fifths">
+          <p>All you need is an Ambi account.</p>
+          <p>Don't have one? Sign up for free:</p>
+          <br>
+          <div class="field has-addons has-addons-centered">
+            <p class="control">
+              <input class="input" type="text" placeholder="Username">
+            </p>
+            <p class="control">
+              <button class="button is-static">@ambi.com</button>
+            </p>
+          </div>
+        </div>
+        <div class="column"></div>
+      </div>
+  </section>
+  <div class="hero is-primary">
+    <div class="hero-body">
+      <h1 class="title is-monospace">@Daydream</h1>
+    </div>
+  </div>
+  <div class="hero is-danger">
+    <div class="hero-body">
+      <h1 class="title is-monospace">@JustCause</h1>
+    </div>
+  </div>
+  <section class="section has-text-centered">
+    <h1 class="title">So what are you waiting for?</h1>
+    <button class="button is-primary">Sign up for free</button>
+    <button class="button is-primary is-outlined">Log in to Ambi Translate</button>
   </section>
 </body>
 
