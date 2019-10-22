@@ -12,16 +12,13 @@ copyright = "Everything is mine"
 
     [languages.en.params]
       revolution="The Revolution is Here"
-      speak = "Finally, we can speak clearly"
-
+ 
   [languages.ip_ni]
     title = "zz bb"
     weight = 2
 
     [languages.ip_ni.params]
-      revolution="sӼ 8ኻ8Ѹ 8Ѹ൝R ঔYӼѾ0.ރYF82ߡM"
-      speak = "8g Xǌ8இs *ރኻǌ8ރΔ ঔǌΔ ,*ރރǌঔӼyY"
-     
+      revolution="sӼ 8ኻ8Ѹ 8Ѹ൝R ঔYӼѾ0.ރYF82ߡM"   
 
 [params]
 
