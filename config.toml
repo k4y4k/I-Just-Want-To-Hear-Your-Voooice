@@ -51,6 +51,12 @@ copyright = "Everything is mine"
       NameOne="@Daydream"
       NameTwo="@JustCause"
       WaitingFor="So what are you waiting for?"
+      Tantan_Name="Hello! I'm Daydream."
+      Tantan_Beautiful="The sky sure is beautiful today."
+      Tantan_Drink="You up for a hot cocoa later? Is it okay if I bring my dog?"
+      Genesis_Name="Hello. I'm Just Cause."
+      Genesis_Two="Two <strong>are</strong> are friendlier than one!"
+      Genesis_Family="I could go for a cappuccino. Want one later?"
       
   [languages.ip_ni]
     title = "8Ѿǌރsঔǌኻ൝R Ӽ˟mȬ"
@@ -97,7 +103,12 @@ copyright = "Everything is mine"
       NameOne="mǌ8ኻd*ǌ}Ќ@"
       NameTwo="8s0.ǌ-Ѿs0.|r@"
       WaitingFor="0.Y* ѾǌѸg ⅖ঔӼѾӼǌg ?ኻY, 8ኻǌ Yjʈ"
-
+      Tantan_Name="m'w& !Yރރ8<e .mǌ8ኻd*ǌ}Ќ"
+      Tantan_Beautiful=".*ǌdYѾ 8ኻ0.s *Xs sӼ ރ0.,ӼѾ0.ǌ8˟ 8Ѹ൝R"
+      Tantan_Drink="இ0. *ǌXY *m ?ኻ8Ѿǌރ ѾӼ ,Ӽ ѾYѸ ኻY, ?⅖Yd ǌYΔYΔ ⅖ঔӼኻ˟ ǌ 0.YNծӳ sw& w&"
+      Genesis_Name="Ѿs0.|r m'w& .Yރރ8<e .8s0.ǌ-"
+      Genesis_Two="ঔǌѸѾ 8ঔY ኻ8Ӽރdঔ8Ӽኻ, <strong>8ኻǌ</strong> Yg൝R"
+      Genesis_Family="8ঔY ?ኻ8Ѿǌރ Y⅖ ኻY, dރ0.YΔ .YঔӼΔΔ0.இஇǌΔ ǌ Ѿঔǌǅb w&"
 
 [params]
 
