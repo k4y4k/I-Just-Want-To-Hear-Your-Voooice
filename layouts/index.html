@@ -11,15 +11,16 @@
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar has-text-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item">
         <h2 class="subtitle">{{ .Site.Params.Title }}</h2>
       </div>
       <div class="navbar-item" style="position: absolute; right:0;">
-        <a class="button" href="{{ .Site.Params.OtherLangLink }}">
-          {{ .Site.Params.OtherLang }}
-        </a>
+        <button class="button is-primary">
+          <a class="has-text-dark" href="{{ .Site.Params.OtherLangLink }}">
+            {{ .Site.Params.OtherLang }}
+          </a></button>
       </div>
     </div>
   </nav>
@@ -83,12 +84,13 @@
       <p>{{ .Site.Params.ExoticCompliment }}</p>
       <br>
       <h2 class="subtitle">{{ .Site.Params.WithTranslate }}</h2>
+      <p>{{.Site.Params.TranslateProd}}</p>
     </div>
   </section>
   <section class="section">
     <div class="container has-text-centered">
       <h1 class="title">{{ .Site.Params.How }}</h1>
-      <h2 class="subtitle">{{ .Site.Params.JustSpeak }}</h2>
+      <h2 class="subtitle has-text-light">{{ .Site.Params.JustSpeak }}</h2>
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-8">
           <div class="tile">
@@ -119,11 +121,11 @@
             </h2>
             <p>{{ .Site.Params.TheWayYou }}</p>
             <br>
-            <p class="has-text-weight-bold">{{ .Site.Params.AmbiMail }}</p>
+            <strong>{{ .Site.Params.AmbiMail }}</strong>
             <p>{{ .Site.Params.Inbox }}</p>
-            <p class="has-text-weight-bold">{{ .Site.Params.Here }}</p>
+            <strong>{{ .Site.Params.Here }}</strong>
             <p>{{ .Site.Params.CatchUp }}</p>
-            <p class="has-text-weight-bold">{{ .Site.Params.OnCall }}</p>
+            <strong>{{ .Site.Params.OnCall }}</strong>
             <p>{{ .Site.Params.AmbiSpeak }}</p>
           </article>
         </div>
@@ -136,10 +138,10 @@
           <br>
           <div class="field has-addons has-addons-centered">
             <p class="control">
-              <input class="input" type="text" placeholder="Username">
+              <input class="input is-primary" type="text" placeholder="Username">
             </p>
             <p class="control">
-              <button class="button is-static">
+              <button class="button is-static" id="at-ambi">
                 {{ .Site.Params.AtAmbi }}
               </button>
             </p>

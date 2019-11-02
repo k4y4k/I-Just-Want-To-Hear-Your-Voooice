@@ -1,4 +1,39 @@
+$primary: #e1bc29;
+$info: #cd4e4d;
+$dark: #32312f;
+$input-background-color: #424138;
+$input-color: white;
+
 @import "bulma.sass";
+
+body {
+  background-color: $dark;
+  color: $light;
+}
+
+h1,
+h2,
+h3 {
+  color: $light;
+}
+
+.title,
+.subtitle,
+strong {
+  color: $primary;
+}
+
+nav {
+  h2 {
+    color: $dark !important;
+  }
+}
+
+.box {
+  background-color: #424138;
+  color: inherit;
+  border: 1px dotted $primary;
+}
 
 .feature-section {
   margin-bottom: 10px;
@@ -7,15 +42,18 @@
 .feature-section-body {
   display: flex;
   flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 
   .feature-section-content {
     flex-grow: 1;
     z-index: 2;
   }
+}
 
-  max-width: 1200px;
-  width: 100%;
-  // margin: 0 auto;
+.underline {
+  text-decoration: underline;
 }
 
 .feature-image-left {
@@ -47,4 +85,14 @@
     background-repeat: no-repeat;
     background-position: right;
   }
+}
+
+.input::placeholder {
+  color: #e1bc29;
+}
+
+#at-ambi {
+  border: 1px solid #e1bc29;
+  background-color: $dark;
+  color: $light;
 }
