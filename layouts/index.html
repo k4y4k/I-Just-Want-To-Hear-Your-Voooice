@@ -147,32 +147,31 @@
         </div>
         <div class="column"></div>
       </div>
-  <div class="feature-section"> 
-     <div class="feature-section-body" id="tantan">
-
-    {{ $tantan := resources.Get "img/tantan.png" }}
-    {{ $tantan = $tantan.Resize "500x" }}
-    <img class="feature-image-left "  src="{{ $tantan.Permalink }}" alt="">
-    <div class="feature-section-content">
-      <h1 class="title is-monospace">{{ .Site.Params.NameOne }}</h1>
-      <p>a</p>
-      <p>b</p>
-      <p>c</p>
-    </div>
+  </section>
+  <div class="feature-section">
+    <div class="feature-section-body" id="tantan">
+      {{ $tantan := resources.Get "img/tantan.png" }}
+      {{ $tantan = $tantan.Resize "500x" }}
+      <img class="feature-image-left " src="{{ $tantan.Permalink }}" alt="">
+      <div class="feature-section-content">
+        <h1 class="title is-monospace">{{ .Site.Params.NameOne }}</h1>
+        <p>a</p>
+        <p>b</p>
+        <p>c</p>
+      </div>
     </div>
   </div>
   <div class="feature-section">
-     <div class="feature-section-body" id="genesis">
-
-    <div class="feature-section-content">
-      <h1 class="title is-monospace">{{ .Site.Params.NameTwo }}</h1>
-      <p>a</p>
-      <p>b</p>
-      <p>c</p>
-    </div>
-    {{ $genesis := resources.Get "img/genesis.png" }}
-    {{ $genesis = $genesis.Resize "500x" }}
-    <img class="feature-image-right " src="{{ $genesis.Permalink }}" alt="">
+    <div class="feature-section-body" id="genesis">
+      <div class="feature-section-content">
+        <h1 class="title is-monospace">{{ .Site.Params.NameTwo }}</h1>
+        <p>a</p>
+        <p>b</p>
+        <p>c</p>
+      </div>
+      {{ $genesis := resources.Get "img/genesis.png" }}
+      {{ $genesis = $genesis.Resize "500x" }}
+      <img class="feature-image-right " src="{{ $genesis.Permalink }}" alt="">
     </div>
   </div>
   <section class="section has-text-centered">
