@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <nav class="navbar has-text-dark" role="navigation" aria-label="main navigation">
+  <nav class="navbar has-text-dark" role="navigation"
+    aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item">
         <h2 class="subtitle">{{ .Site.Params.Title }}</h2>
@@ -92,8 +93,8 @@
       {{ $tantan := resources.Get "img/tantan.png" }}
       {{ $tantan = $tantan.Resize "500x" }}
       <img class="feature-image-left " src="{{ $tantan.Permalink }}" alt="">
-      <div class="feature-section-content">
-        <h1 class="title is-monospace">{{ .Site.Params.NameOne }}</h1>
+      <div class="feature-section-content section">
+        <h1 class="title is-family-monospace">{{ .Site.Params.NameOne }}</h1>
         <p>{{ .Site.Params.Tantan_Name }}</p>
         <p>{{ .Site.Params.Tantan_Beautiful }}</p>
         <p>{{ .Site.Params.Tantan_Drink }}</p>
@@ -102,8 +103,8 @@
   </div>
   <div class="feature-section">
     <div class="feature-section-body" id="genesis">
-      <div class="feature-section-content">
-        <h1 class="title is-monospace">{{ .Site.Params.NameTwo }}</h1>
+      <div class="feature-section-content section">
+        <h1 class="title is-family-monospace">{{ .Site.Params.NameTwo }}</h1>
         <p>{{ .Site.Params.Genesis_Name }}</p>
         <p>{{ .Site.Params.Genesis_Two | markdownify }}</p>
         <p>{{ .Site.Params.Genesis_Family }}</p>
@@ -164,7 +165,8 @@
           <br>
           <div class="field has-addons has-addons-centered">
             <p class="control">
-              <input class="input is-primary" type="text" placeholder="Username">
+              <input class="input is-primary" type="text"
+                placeholder="Username">
             </p>
             <p class="control">
               <button class="button is-static" id="at-ambi">
