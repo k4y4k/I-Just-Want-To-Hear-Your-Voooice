@@ -11,21 +11,20 @@
 </head>
 
 <body>
-  <nav class="navbar has-text-dark" role="navigation"
-    aria-label="main navigation">
-    <div class="navbar-brand">
-      <div class="navbar-item">
-        <h2 class="subtitle">{{ .Site.Params.Title }}</h2>
-      </div>
-      <div class="navbar-item" style="position: absolute; right:0;">
-        <button class="button is-primary">
-          <a class="has-text-dark" href="{{ .Site.Params.OtherLangLink }}">
-            {{ .Site.Params.OtherLang }}
-          </a></button>
-      </div>
-    </div>
-  </nav>
   <div class="hero is-medium is-dark is-bold has-text-centered ">
+    <div class="hero-head">
+      <nav class="navbar has-text-light" role="navigation"
+        aria-label="main navigation">
+        <div class="navbar-brand">
+          <div class="navbar-item" style="position: absolute; right:0;">
+            <button class="button is-primary">
+              <a class="has-text-dark" href="{{ .Site.Params.OtherLangLink }}">
+                {{ .Site.Params.OtherLang }}
+              </a></button>
+          </div>
+        </div>
+      </nav>
+    </div>
     <div class="hero-body">
       <div class="container">
         <h1 class="title"> {{ .Site.Params.Title }} </h1>
@@ -94,20 +93,46 @@
       {{ $tantan = $tantan.Resize "500x" }}
       <img class="feature-image-left " src="{{ $tantan.Permalink }}" alt="">
       <div class="feature-section-content section">
-        <h1 class="title is-family-monospace">{{ .Site.Params.NameOne }}</h1>
-        <p>{{ .Site.Params.Tantan_Name }}</p>
-        <p>{{ .Site.Params.Tantan_Beautiful }}</p>
-        <p>{{ .Site.Params.Tantan_Drink }}</p>
+        <h1 class="title is-family-monospace nudge-down">
+          {{ .Site.Params.NameOne }}</h1>
+        <div class="speak-bubble">
+          <p class="speak">
+            <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
+            {{ .Site.Params.Tantan_Name }}</p>
+        </div>
+        <div class="speak-bubble">
+          <p class="speak">
+            <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
+            {{ .Site.Params.Tantan_Beautiful }}</p>
+        </div>
+        <div class="speak-bubble">
+          <p class="speak">
+            <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
+            {{ .Site.Params.Tantan_Drink }}</p>
+        </div>
       </div>
     </div>
   </div>
   <div class="feature-section">
     <div class="feature-section-body" id="genesis">
       <div class="feature-section-content section">
-        <h1 class="title is-family-monospace">{{ .Site.Params.NameTwo }}</h1>
-        <p>{{ .Site.Params.Genesis_Name }}</p>
-        <p>{{ .Site.Params.Genesis_Two | markdownify }}</p>
-        <p>{{ .Site.Params.Genesis_Family }}</p>
+        <h1 class="title is-family-monospace nudge-down">
+          {{ .Site.Params.NameTwo }}</h1>
+        <div class="speak-bubble">
+          <p class="speak">
+            <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
+            {{ .Site.Params.Genesis_Name }}</p>
+        </div>
+        <div class="speak-bubble">
+          <p class="speak">
+            <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
+            {{ .Site.Params.Genesis_Two |markdownify}}</p>
+        </div>
+        <div class="speak-bubble">
+          <p class="speak">
+            <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
+            {{ .Site.Params.Genesis_Family }}</p>
+        </div>
       </div>
       {{ $genesis := resources.Get "img/genesis.png" }}
       {{ $genesis = $genesis.Resize "500x" }}

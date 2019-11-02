@@ -23,12 +23,6 @@ strong {
   color: $primary;
 }
 
-nav {
-  h2 {
-    color: $dark !important;
-  }
-}
-
 .box {
   background-color: #424138;
   color: inherit;
@@ -58,20 +52,20 @@ nav {
 
 .feature-image-left {
   margin-left: -150px;
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $tablet * 0.75) {
     display: none;
   }
 }
 
 .feature-image-right {
   margin-right: -150px;
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $tablet * 0.75) {
     display: none;
   }
 }
 
 #tantan {
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $tablet * 0.75) {
     background-image: url(../img/tantan-bg.png);
     background-repeat: no-repeat;
   }
@@ -96,4 +90,36 @@ nav {
   border: 1px solid #e1bc29;
   background-color: $dark;
   color: $light;
+}
+
+.speak-bubble {
+  display: block;
+}
+
+.speak {
+  background-color: $info;
+  display: inline-block;
+  padding: 7px 14px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.speaker-button {
+  width: 50px;
+  height: 50px;
+}
+
+.speaker-icon {
+  height: 1.25em;
+  width: 1.25em;
+  top: 0.125em;
+  position: relative;
+  margin-right: 5px;
+  background: $primary;
+  padding: 0.2em;
+  border-radius: 50px;
+}
+
+.nudge-down {
+  margin-top: 175px;
 }
