@@ -87,6 +87,32 @@
       <p>{{.Site.Params.TranslateProd}}</p>
     </div>
   </section>
+  <div class="feature-section">
+    <div class="feature-section-body" id="tantan">
+      {{ $tantan := resources.Get "img/tantan.png" }}
+      {{ $tantan = $tantan.Resize "500x" }}
+      <img class="feature-image-left " src="{{ $tantan.Permalink }}" alt="">
+      <div class="feature-section-content">
+        <h1 class="title is-monospace">{{ .Site.Params.NameOne }}</h1>
+        <p>{{ .Site.Params.Tantan_Name }}</p>
+        <p>{{ .Site.Params.Tantan_Beautiful }}</p>
+        <p>{{ .Site.Params.Tantan_Drink }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="feature-section">
+    <div class="feature-section-body" id="genesis">
+      <div class="feature-section-content">
+        <h1 class="title is-monospace">{{ .Site.Params.NameTwo }}</h1>
+        <p>{{ .Site.Params.Genesis_Name }}</p>
+        <p>{{ .Site.Params.Genesis_Two | markdownify }}</p>
+        <p>{{ .Site.Params.Genesis_Family }}</p>
+      </div>
+      {{ $genesis := resources.Get "img/genesis.png" }}
+      {{ $genesis = $genesis.Resize "500x" }}
+      <img class="feature-image-right " src="{{ $genesis.Permalink }}" alt="">
+    </div>
+  </div>
   <section class="section">
     <div class="container has-text-centered">
       <h1 class="title">{{ .Site.Params.How }}</h1>
@@ -149,39 +175,6 @@
         </div>
         <div class="column"></div>
       </div>
-  </section>
-  <div class="feature-section">
-    <div class="feature-section-body" id="tantan">
-      {{ $tantan := resources.Get "img/tantan.png" }}
-      {{ $tantan = $tantan.Resize "500x" }}
-      <img class="feature-image-left " src="{{ $tantan.Permalink }}" alt="">
-      <div class="feature-section-content">
-        <h1 class="title is-monospace">{{ .Site.Params.NameOne }}</h1>
-        <p>a</p>
-        <p>b</p>
-        <p>c</p>
-      </div>
-    </div>
-  </div>
-  <div class="feature-section">
-    <div class="feature-section-body" id="genesis">
-      <div class="feature-section-content">
-        <h1 class="title is-monospace">{{ .Site.Params.NameTwo }}</h1>
-        <p>a</p>
-        <p>b</p>
-        <p>c</p>
-      </div>
-      {{ $genesis := resources.Get "img/genesis.png" }}
-      {{ $genesis = $genesis.Resize "500x" }}
-      <img class="feature-image-right " src="{{ $genesis.Permalink }}" alt="">
-    </div>
-  </div>
-  <section class="section has-text-centered">
-    <h1 class="title">{{ .Site.Params.WaitingFor }}</h1>
-    <button class="button is-primary">{{ .Site.Params.SignUp }}</button>
-    <button class="button is-primary is-outlined">
-      {{ .Site.Params.LogIn }}
-    </button>
   </section>
 </body>
 
