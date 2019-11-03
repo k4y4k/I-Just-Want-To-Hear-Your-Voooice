@@ -8,6 +8,9 @@
   {{ $cssOpts := (dict "includePaths" (slice "node_modules/bulma" "assets/scss")) }}
   {{ $style := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <script src="https://cdn.jsdelivr.net/npm/howler@2.1.2/dist/howler.min.js"
+    integrity="sha256-El7dyxdVp1e1v0xgjrrpzr5+BO29pwP0Qfl40VDffiI="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -96,19 +99,22 @@
         <h1 class="title is-family-monospace nudge-down">
           {{ .Site.Params.NameOne }}</h1>
         <div class="speak-bubble">
-          <p class="speak">
+          <p class="speak" data-voiceline="tant1">
             <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
-            {{ .Site.Params.Tantan_Name }}</p>
+            {{ .Site.Params.Tantan_Name }}
+          </p>
         </div>
         <div class="speak-bubble">
-          <p class="speak">
+          <p class="speak" data-voiceline="tant2">
             <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
-            {{ .Site.Params.Tantan_Beautiful }}</p>
+            {{ .Site.Params.Tantan_Beautiful }}
+          </p>
         </div>
         <div class="speak-bubble">
-          <p class="speak">
+          <p class="speak" data-voiceline="tant3">
             <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
-            {{ .Site.Params.Tantan_Drink }}</p>
+            {{ .Site.Params.Tantan_Drink }}
+          </p>
         </div>
       </div>
     </div>
@@ -119,19 +125,22 @@
         <h1 class="title is-family-monospace nudge-down">
           {{ .Site.Params.NameTwo }}</h1>
         <div class="speak-bubble">
-          <p class="speak">
+          <p class="speak" data-voiceline="gen1">
             <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
-            {{ .Site.Params.Genesis_Name }}</p>
+            {{ .Site.Params.Genesis_Name }}
+          </p>
         </div>
         <div class="speak-bubble">
-          <p class="speak">
+          <p class="speak" data-voiceline="gen2">
             <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
-            {{ .Site.Params.Genesis_Two |markdownify}}</p>
+            {{ .Site.Params.Genesis_Two |markdownify}}
+          </p>
         </div>
         <div class="speak-bubble">
-          <p class="speak">
+          <p class="speak" data-voiceline="gen3">
             <img class="speaker-icon" src="../img/speaker-icon.svg" alt="">
-            {{ .Site.Params.Genesis_Family }}</p>
+            {{ .Site.Params.Genesis_Family }}
+          </p>
         </div>
       </div>
       {{ $genesis := resources.Get "img/genesis.png" }}
@@ -203,6 +212,8 @@
         <div class="column"></div>
       </div>
   </section>
+  {{ $script := resources.Get "js/scripts.js" }}
+  <script src="{{ $script.Permalink }}"></script>
 </body>
 
 </html>
