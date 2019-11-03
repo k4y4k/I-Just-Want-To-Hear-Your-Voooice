@@ -4,7 +4,7 @@ $dark: #32312f;
 $input-background-color: #424138;
 $input-color: white;
 
-@import "bulma.sass";
+@import 'bulma.sass';
 
 body {
   background-color: $dark;
@@ -30,7 +30,12 @@ strong {
 }
 
 .feature-section {
-  margin-bottom: 10px;
+  padding-top: 10px;
+  background: linear-gradient(to bottom left, #1a1714 0%, #42413800 33%);
+
+  &:nth-of-type(2) {
+    background: linear-gradient(to bottom right, #1a1714 0%, #42413800 33%);
+  }
 }
 
 .feature-section-body {
